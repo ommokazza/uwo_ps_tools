@@ -1,8 +1,6 @@
-============
-uwo_ps_tools
-============
+# UWO PS Tools
 
-Tools for UWO PS Projects
+Tools for UWO Price Share Projects
 (UWO : Uncharted Waters Online)
 
 # Tools
