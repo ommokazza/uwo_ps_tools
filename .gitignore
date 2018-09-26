@@ -102,3 +102,12 @@ venv.bak/
 
 # mypy
 .mypy_cache/
+
+# Visual Studio Code
+.vscode/
+
+# This Project
+gen/
+screenshots/
+screenshots_no_label/
+
