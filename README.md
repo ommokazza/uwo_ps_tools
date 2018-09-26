@@ -8,3 +8,6 @@ Tools for UWO Price Share Projects
 : Extracts training data from screenshot and label file.
 - make_label_with_ml.py
 : Make label file for a screenshot by using learned model.
+
+# Configuration
+pip install -r requirements.txt
