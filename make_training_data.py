@@ -8,7 +8,7 @@ import os
 # we have alread enough data from ivyro site
 # You have to copy generated files to resources directory
 # to apply new training data to machine learning.
-SCREENSHOT_DIR = "C:\\Users\\ommok\\Documents\\src\\raw_data\\screenshots"
+SCREENSHOT_DIR = "./screenshots"
 OUTPUT_DIRS = [
     "",#"./gen/training_data_goods",
     "./gen/training_data_towns",

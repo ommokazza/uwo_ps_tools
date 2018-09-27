@@ -6,7 +6,7 @@ import sys
 import tools.generate_label_ml as glt
 
 # Modify This ------------------------------
-SCREENSHOT_DIR = "C:\\Users\\ommok\\Documents\\src\\raw_data\\screenshots_no_label"
+SCREENSHOT_DIR = "./screenshots_no_label"
 MODEL_DIRS = [
     "./resources/model_goods",
     "./resources/model_towns",
@@ -30,5 +30,5 @@ def __manual_fix(labels):
 glt.main(SCREENSHOT_DIR,
          MODEL_DIRS,
          LABEL_PATHS,
-         "!LowRank",    #filter string
+         "",    #filter string
          __manual_fix)
