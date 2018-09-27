@@ -6,7 +6,7 @@ import sys
 import tools.generate_label_ml as glt
 
 # Modify This ------------------------------
-SCREENSHOT_DIR = "./screenshots_no_label"
+SCREENSHOT_DIR = "C:\\Users\\ommok\\Documents\\src\\raw_data\\screenshots_no_label"
 MODEL_DIRS = [
     "./resources/model_goods",
     "./resources/model_towns",
@@ -20,15 +20,15 @@ LABEL_PATHS = [
 # ------------------------------------------
 
 def __manual_fix(labels):
-    # labels[3] = 'Madeira'
-    # labels[6] = 'Madeira'
-    # labels[9] = 'Arguin'
-    # labels[12] = 'Cattaro'
-    # labels[15] = 'Venice'
+    # labels[3] = 'Lisbon'
+    # labels[6] = 'Porto'
+    # labels[9] = 'Gijon'
+    # labels[12] = 'Seville'
+    # labels[15] = 'Bilbao '
     return labels
 
 glt.main(SCREENSHOT_DIR,
          MODEL_DIRS,
          LABEL_PATHS,
-         "",    #filter string
+         "!LowRank",    #filter string
          __manual_fix)
