@@ -8,6 +8,9 @@ from PIL import Image
 def main(input_dir, output_dir, output_name):
     files = sorted(get_image_paths(input_dir, "png"))
 
+    if not os.path.exists(output_dir):
+        os.makedirs(output_dir)
+
     label_file = open(os.path.join(output_dir, output_name + ".label"), "wt")
 
     im = Image.open(files[0])
