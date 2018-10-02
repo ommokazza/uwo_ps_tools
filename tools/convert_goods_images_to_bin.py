@@ -47,7 +47,7 @@ def get_image_paths(directory, ext):
     return image_files
 
 def __verify(goods_name):
-    label_file = open("./gen/goods.label", "rt")
+    label_file = open("./gen/goods.labels", "rt")
     labels = label_file.read().splitlines()
     label_file.close()
 
