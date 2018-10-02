@@ -1,4 +1,4 @@
-"""Converting goods images to single binary and label files.
+"""Converting images to single binary and label files.
 """
 import argparse
 import os
@@ -46,15 +46,15 @@ def get_image_paths(directory, ext):
                 image_files.append(os.sep.join([dirpath, filename]))
     return image_files
 
-def __verify(goods_name):
-    label_file = open("./gen/goods.labels", "rt")
+def __verify(name, img_path, label_path):
+    label_file = open(label_path, "rt")
     labels = label_file.read().splitlines()
     label_file.close()
 
-    im = Image.open("./gen/goods.png")
+    im = Image.open(img_path)
     height = int(im.height / len(labels))
 
-    index = labels.index(goods_name)
+    index = labels.index(name)
     print(labels[index])
     im.crop([0, index * height, im.width, index * height + height]).show()
 
