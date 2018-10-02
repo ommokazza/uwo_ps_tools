@@ -69,6 +69,16 @@ def __make_training_data(image_path, label_path, output_dirs):
         if output_sequences[i]:
             images[i].save(output_format % (output_sequences[i], lines[i], i))
 
+    # Make town names set for new estimator
+    if not os.path.exists(output_dirs[1] + "_set"):
+        os.makedirs(output_dirs[1] + "_set")
+    for i in range(len(images)):
+        if output_sequences[i] and output_sequences[i] == output_dirs[1]:
+            out_path = os.path.join(output_sequences[i] + "_set",
+                                    lines[i] + ".png")
+            if not os.path.exists(out_path):
+                images[i].save(out_path)
+
     # For debugging to find wrong match
     if name == "":
         print(label_path, lines)
