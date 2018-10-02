@@ -11,7 +11,7 @@ def main(input_dir, output_dir, output_name):
     if not os.path.exists(output_dir):
         os.makedirs(output_dir)
 
-    label_file = open(os.path.join(output_dir, output_name + ".label"), "wt")
+    label_file = open(os.path.join(output_dir, output_name + ".labels"), "wt")
 
     im = Image.open(files[0])
     height = im.height
