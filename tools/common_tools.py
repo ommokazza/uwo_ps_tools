@@ -15,7 +15,7 @@ def generate_chat_messages(in_dir, out_dir):
     if not os.path.exists(out_dir):
         os.makedirs(out_dir)
 
-    mk_bytes = Image.open("resources/marketkeeper.png")\
+    mk_bytes = Image.open("resources/chat_imgs/marketkeeper.png")\
                     .point(__clear_bg)\
                     .tobytes()
     count = 0
